@@ -1,0 +1,58 @@
+
+<button routerLink="/definitions">הגדרות</button><br/>
+
+<div  *ngFor="let item of arrActions"  >
+    {{item.typeAction}}
+     <input type="radio" [value]="item.actionId" name="item.actionId" [(ngModel)]="filter.action">
+    
+</div> 
+ <form > 
+<select name="categorySelect" [(ngModel)]="filter.category">
+         <option [value]="item.categoryId" *ngFor="let item of arrCategories" >
+             {{item.categoryName}}
+        </option>
+</select> <br/> 
+
+
+
+<!-- הראשון ריק -->
+ <select name="branchSelect"  [(ngModel)]="filter.branch" >
+    <option  [value]="item.branchId"  *ngFor="let item of arrBranches"  >
+        {{item.branchName}}
+   </option>
+</select> <br/>
+
+<select name="chainStoreSelect" [(ngModel)]="filter.chainStore" (ngModelChange)="chooseChainStore(+$event)">
+  
+        <option [value]="item.chainStoreId" *ngFor="let item of arrChainStores" >
+            {{item.chainStoreName}}
+        
+        </option>
+    
+</select> <br/>
+
+<!-- התאריך לא מתעדכן -->
+<!--<label>:מתאריך</label>
+<input type="date" [ngModel] ="filter.beginDate | date:'yyyy-MM-dd'" (change)="check($event)">
+
+<label>עד תאריך</label>
+<input type="date" value="עד תאריך"[(ngModel)]="filter.endDate"><br/>
+
+ <div *ngFor="let item of arrPayments">  
+     {{item.paymentDescription}}
+    <input type="radio" [value]="item.paymentId" name="item.paymentId" [(ngModel)]="filter.kindOfPayment">
+</div>-->
+<!--  סל  -->
+
+
+<input type="submit" value="submit">
+ </form> 
+
+
+
+ <button routerLink="/proofPurchase" >
+    <app-proof-purchase [filter]="this.filter"></app-proof-purchase>
+    סנן</button><br/>
+<p>יש לך</p>
+<p>{{this.acquittal}}</p>
+<p>זיכויים</p>

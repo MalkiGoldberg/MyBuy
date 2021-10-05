@@ -1,0 +1,6 @@
+D:\חומר c#\BuyMe\BuyMe\DTO\bin\Debug\DTO.dll
+D:\חומר c#\BuyMe\BuyMe\DTO\bin\Debug\DTO.pdb
+D:\חומר c#\BuyMe\BuyMe\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\חומר c#\BuyMe\BuyMe\DTO\obj\Debug\DTO.dll
+D:\חומר c#\BuyMe\BuyMe\DTO\obj\Debug\DTO.pdb
+D:\חומר c#\BuyMe\BuyMe\DTO\obj\Debug\DTO.csprojAssemblyReference.cache

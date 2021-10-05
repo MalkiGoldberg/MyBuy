@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MyBuyModelStoreContainer" CdmEntityContainer="MyBuyEntities">
+    <EntitySetMapping Name="Actions">
+      <EntityTypeMapping TypeName="MyBuyModel.Action">
+        <MappingFragment StoreEntitySet="Actions">
+          <ScalarProperty Name="actionId" ColumnName="actionId" />
+          <ScalarProperty Name="typeAction" ColumnName="typeAction" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Branches">
+      <EntityTypeMapping TypeName="MyBuyModel.Branch">
+        <MappingFragment StoreEntitySet="Branches">
+          <ScalarProperty Name="brachId" ColumnName="brachId" />
+          <ScalarProperty Name="branchName" ColumnName="branchName" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="idManager" ColumnName="idManager" />
+          <ScalarProperty Name="idChainStore" ColumnName="idChainStore" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="userName" ColumnName="userName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="MyBuyModel.Category">
+        <MappingFragment StoreEntitySet="Category">
+          <ScalarProperty Name="categoryId" ColumnName="categoryId" />
+          <ScalarProperty Name="categoryName" ColumnName="categoryName" />
+          <ScalarProperty Name="dateOfEvacuation" ColumnName="dateOfEvacuation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CategoryInBranches">
+      <EntityTypeMapping TypeName="MyBuyModel.CategoryInBranch">
+        <MappingFragment StoreEntitySet="CategoryInBranch">
+          <ScalarProperty Name="categoryInBranchId" ColumnName="categoryInBranchId" />
+          <ScalarProperty Name="idBranch" ColumnName="idBranch" />
+          <ScalarProperty Name="idCategory" ColumnName="idCategory" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChainStores">
+      <EntityTypeMapping TypeName="MyBuyModel.ChainStore">
+        <MappingFragment StoreEntitySet="ChainStore">
+          <ScalarProperty Name="chainStoreId" ColumnName="chainStoreId" />
+          <ScalarProperty Name="chainStoreName" ColumnName="chainStoreName" />
+          <ScalarProperty Name="idManager" ColumnName="idManager" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Managers">
+      <EntityTypeMapping TypeName="MyBuyModel.Manager">
+        <MappingFragment StoreEntitySet="Managers">
+          <ScalarProperty Name="managerId" ColumnName="managerId" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="mail" ColumnName="mail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Payments">
+      <EntityTypeMapping TypeName="MyBuyModel.Payment">
+        <MappingFragment StoreEntitySet="Payment">
+          <ScalarProperty Name="paymentId" ColumnName="paymentId" />
+          <ScalarProperty Name="paymentDescription" ColumnName="paymentDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProofPurchases">
+      <EntityTypeMapping TypeName="MyBuyModel.ProofPurchase">
+        <MappingFragment StoreEntitySet="ProofPurchase">
+          <ScalarProperty Name="proofPurchaseId" ColumnName="proofPurchaseId" />
+          <ScalarProperty Name="idAction" ColumnName="idAction" />
+          <ScalarProperty Name="idUsers" ColumnName="idUsers" />
+          <ScalarProperty Name="idBranch" ColumnName="idBranch" />
+          <ScalarProperty Name="idCategory" ColumnName="idCategory" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="paymentId" ColumnName="paymentId" />
+          <ScalarProperty Name="sum" ColumnName="sum" />
+          <ScalarProperty Name="numPayment" ColumnName="numPayment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RecyclingBaskets">
+      <EntityTypeMapping TypeName="MyBuyModel.RecyclingBasket">
+        <MappingFragment StoreEntitySet="RecyclingBasket">
+          <ScalarProperty Name="recyclingBasketId" ColumnName="recyclingBasketId" />
+          <ScalarProperty Name="idPoofPurchase" ColumnName="idPoofPurchase" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="MyBuyModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="MyBuyModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="mail" ColumnName="mail" />
+          <ScalarProperty Name="password" ColumnName="password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="MyBuyModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="MyBuyModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="MyBuyModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="MyBuyModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MyBuyModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="MyBuyModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MyBuyModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="MyBuyModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="MyBuyModel.Store.sp_upgraddiagrams" />
+  </EntityContainerMapping>
+</Mapping>

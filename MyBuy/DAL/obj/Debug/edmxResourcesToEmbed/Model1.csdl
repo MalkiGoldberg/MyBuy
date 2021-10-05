@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MyBuyModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Action">
+    <Key>
+      <PropertyRef Name="actionId" />
+    </Key>
+    <Property Name="actionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="typeAction" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="ProofPurchases" Relationship="Self.FK_ProofPurchase_Actions" FromRole="Actions" ToRole="ProofPurchase" />
+  </EntityType>
+  <EntityType Name="Branch">
+    <Key>
+      <PropertyRef Name="brachId" />
+    </Key>
+    <Property Name="brachId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="branchName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="city" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="address" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="phone" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="idManager" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="idChainStore" Type="Int32" />
+    <Property Name="password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="userName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CategoryInBranches" Relationship="Self.FK_CategoryInBranch_Branches" FromRole="Branches" ToRole="CategoryInBranch" />
+    <NavigationProperty Name="ProofPurchases" Relationship="Self.FK_ProofPurchase_Branches" FromRole="Branches" ToRole="ProofPurchase" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="categoryId" />
+    </Key>
+    <Property Name="categoryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="categoryName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="dateOfEvacuation" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="CategoryInBranches" Relationship="Self.FK_CategoryInBranch_Category" FromRole="Category" ToRole="CategoryInBranch" />
+    <NavigationProperty Name="ProofPurchases" Relationship="Self.FK_ProofPurchase_Category" FromRole="Category" ToRole="ProofPurchase" />
+  </EntityType>
+  <EntityType Name="CategoryInBranch">
+    <Key>
+      <PropertyRef Name="categoryInBranchId" />
+    </Key>
+    <Property Name="categoryInBranchId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idBranch" Type="Int32" Nullable="false" />
+    <Property Name="idCategory" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Branch" Relationship="Self.FK_CategoryInBranch_Branches" FromRole="CategoryInBranch" ToRole="Branches" />
+    <NavigationProperty Name="Category" Relationship="Self.FK_CategoryInBranch_Category" FromRole="CategoryInBranch" ToRole="Category" />
+  </EntityType>
+  <EntityType Name="ChainStore">
+    <Key>
+      <PropertyRef Name="chainStoreId" />
+    </Key>
+    <Property Name="chainStoreId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="chainStoreName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="idManager" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Manager" Relationship="Self.FK_ChainStore_Managers" FromRole="ChainStore" ToRole="Managers" />
+  </EntityType>
+  <EntityType Name="Manager">
+    <Key>
+      <PropertyRef Name="managerId" />
+    </Key>
+    <Property Name="managerId" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="firstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="lastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ChainStores" Relationship="Self.FK_ChainStore_Managers" FromRole="Managers" ToRole="ChainStore" />
+  </EntityType>
+  <EntityType Name="Payment">
+    <Key>
+      <PropertyRef Name="paymentId" />
+    </Key>
+    <Property Name="paymentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="paymentDescription" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="ProofPurchases" Relationship="Self.FK_ProofPurchase_Payment" FromRole="Payment" ToRole="ProofPurchase" />
+  </EntityType>
+  <EntityType Name="ProofPurchase">
+    <Key>
+      <PropertyRef Name="proofPurchaseId" />
+    </Key>
+    <Property Name="proofPurchaseId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idAction" Type="Int32" Nullable="false" />
+    <Property Name="idUsers" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="idBranch" Type="Int32" Nullable="false" />
+    <Property Name="idCategory" Type="Int32" />
+    <Property Name="date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="paymentId" Type="Int32" Nullable="false" />
+    <Property Name="sum" Type="Double" Nullable="false" />
+    <Property Name="numPayment" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Action" Relationship="Self.FK_ProofPurchase_Actions" FromRole="ProofPurchase" ToRole="Actions" />
+    <NavigationProperty Name="Branch" Relationship="Self.FK_ProofPurchase_Branches" FromRole="ProofPurchase" ToRole="Branches" />
+    <NavigationProperty Name="Category" Relationship="Self.FK_ProofPurchase_Category" FromRole="ProofPurchase" ToRole="Category" />
+    <NavigationProperty Name="Payment" Relationship="Self.FK_ProofPurchase_Payment" FromRole="ProofPurchase" ToRole="Payment" />
+    <NavigationProperty Name="User" Relationship="Self.FK_ProofPurchase_Users" FromRole="ProofPurchase" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="RecyclingBasket">
+    <Key>
+      <PropertyRef Name="recyclingBasketId" />
+    </Key>
+    <Property Name="recyclingBasketId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idPoofPurchase" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="userId" />
+    </Key>
+    <Property Name="userId" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="firstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="lastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="phone" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="address" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="city" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="password" Type="String" MaxLength="16" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="ProofPurchases" Relationship="Self.FK_ProofPurchase_Users" FromRole="Users" ToRole="ProofPurchase" />
+  </EntityType>
+  <Association Name="FK_ProofPurchase_Actions">
+    <End Role="Actions" Type="Self.Action" Multiplicity="1" />
+    <End Role="ProofPurchase" Type="Self.ProofPurchase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Actions">
+        <PropertyRef Name="actionId" />
+      </Principal>
+      <Dependent Role="ProofPurchase">
+        <PropertyRef Name="idAction" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CategoryInBranch_Branches">
+    <End Role="Branches" Type="Self.Branch" Multiplicity="1" />
+    <End Role="CategoryInBranch" Type="Self.CategoryInBranch" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Branches">
+        <PropertyRef Name="brachId" />
+      </Principal>
+      <Dependent Role="CategoryInBranch">
+        <PropertyRef Name="idBranch" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProofPurchase_Branches">
+    <End Role="Branches" Type="Self.Branch" Multiplicity="1" />
+    <End Role="ProofPurchase" Type="Self.ProofPurchase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Branches">
+        <PropertyRef Name="brachId" />
+      </Principal>
+      <Dependent Role="ProofPurchase">
+        <PropertyRef Name="idBranch" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CategoryInBranch_Category">
+    <End Role="Category" Type="Self.Category" Multiplicity="1" />
+    <End Role="CategoryInBranch" Type="Self.CategoryInBranch" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="categoryId" />
+      </Principal>
+      <Dependent Role="CategoryInBranch">
+        <PropertyRef Name="idCategory" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProofPurchase_Category">
+    <End Role="Category" Type="Self.Category" Multiplicity="0..1" />
+    <End Role="ProofPurchase" Type="Self.ProofPurchase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="categoryId" />
+      </Principal>
+      <Dependent Role="ProofPurchase">
+        <PropertyRef Name="idCategory" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ChainStore_Managers">
+    <End Role="Managers" Type="Self.Manager" Multiplicity="0..1" />
+    <End Role="ChainStore" Type="Self.ChainStore" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Managers">
+        <PropertyRef Name="managerId" />
+      </Principal>
+      <Dependent Role="ChainStore">
+        <PropertyRef Name="idManager" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProofPurchase_Payment">
+    <End Role="Payment" Type="Self.Payment" Multiplicity="1" />
+    <End Role="ProofPurchase" Type="Self.ProofPurchase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Payment">
+        <PropertyRef Name="paymentId" />
+      </Principal>
+      <Dependent Role="ProofPurchase">
+        <PropertyRef Name="paymentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProofPurchase_Users">
+    <End Role="Users" Type="Self.User" Multiplicity="1" />
+    <End Role="ProofPurchase" Type="Self.ProofPurchase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="userId" />
+      </Principal>
+      <Dependent Role="ProofPurchase">
+        <PropertyRef Name="idUsers" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="MyBuyEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Actions" EntityType="Self.Action" />
+    <EntitySet Name="Branches" EntityType="Self.Branch" />
+    <EntitySet Name="Categories" EntityType="Self.Category" />
+    <EntitySet Name="CategoryInBranches" EntityType="Self.CategoryInBranch" />
+    <EntitySet Name="ChainStores" EntityType="Self.ChainStore" />
+    <EntitySet Name="Managers" EntityType="Self.Manager" />
+    <EntitySet Name="Payments" EntityType="Self.Payment" />
+    <EntitySet Name="ProofPurchases" EntityType="Self.ProofPurchase" />
+    <EntitySet Name="RecyclingBaskets" EntityType="Self.RecyclingBasket" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <AssociationSet Name="FK_ProofPurchase_Actions" Association="Self.FK_ProofPurchase_Actions">
+      <End Role="Actions" EntitySet="Actions" />
+      <End Role="ProofPurchase" EntitySet="ProofPurchases" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CategoryInBranch_Branches" Association="Self.FK_CategoryInBranch_Branches">
+      <End Role="Branches" EntitySet="Branches" />
+      <End Role="CategoryInBranch" EntitySet="CategoryInBranches" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProofPurchase_Branches" Association="Self.FK_ProofPurchase_Branches">
+      <End Role="Branches" EntitySet="Branches" />
+      <End Role="ProofPurchase" EntitySet="ProofPurchases" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CategoryInBranch_Category" Association="Self.FK_CategoryInBranch_Category">
+      <End Role="Category" EntitySet="Categories" />
+      <End Role="CategoryInBranch" EntitySet="CategoryInBranches" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProofPurchase_Category" Association="Self.FK_ProofPurchase_Category">
+      <End Role="Category" EntitySet="Categories" />
+      <End Role="ProofPurchase" EntitySet="ProofPurchases" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ChainStore_Managers" Association="Self.FK_ChainStore_Managers">
+      <End Role="Managers" EntitySet="Managers" />
+      <End Role="ChainStore" EntitySet="ChainStores" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProofPurchase_Payment" Association="Self.FK_ProofPurchase_Payment">
+      <End Role="Payment" EntitySet="Payments" />
+      <End Role="ProofPurchase" EntitySet="ProofPurchases" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProofPurchase_Users" Association="Self.FK_ProofPurchase_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="ProofPurchase" EntitySet="ProofPurchases" />
+    </AssociationSet>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(MyBuyModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(MyBuyModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+  </EntityContainer>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+</Schema>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="69a500361f4042929499414a52e70e44" Name="Diagram1">
+        <EntityTypeShape EntityType="MyBuyModel.Action" Width="1.5" PointX="3.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyBuyModel.Branch" Width="1.5" PointX="0.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyBuyModel.Category" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyBuyModel.CategoryInBranch" Width="1.5" PointX="3" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyBuyModel.ChainStore" Width="1.5" PointX="8" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyBuyModel.Manager" Width="1.5" PointX="5.75" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyBuyModel.Payment" Width="1.5" PointX="3.75" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyBuyModel.ProofPurchase" Width="1.5" PointX="6" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyBuyModel.RecyclingBasket" Width="1.5" PointX="0.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyBuyModel.sysdiagram" Width="1.5" PointX="8.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyBuyModel.User" Width="1.5" PointX="3.75" PointY="11.75" IsExpanded="true" />
+        <AssociationConnector Association="MyBuyModel.FK_ProofPurchase_Actions" ManuallyRouted="false" />
+        <AssociationConnector Association="MyBuyModel.FK_CategoryInBranch_Branches" ManuallyRouted="false" />
+        <AssociationConnector Association="MyBuyModel.FK_ProofPurchase_Branches" ManuallyRouted="false" />
+        <AssociationConnector Association="MyBuyModel.FK_CategoryInBranch_Category" ManuallyRouted="false" />
+        <AssociationConnector Association="MyBuyModel.FK_ProofPurchase_Category" ManuallyRouted="false" />
+        <AssociationConnector Association="MyBuyModel.FK_ChainStore_Managers" ManuallyRouted="false" />
+        <AssociationConnector Association="MyBuyModel.FK_ProofPurchase_Payment" ManuallyRouted="false" />
+        <AssociationConnector Association="MyBuyModel.FK_ProofPurchase_Users" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,14 @@
+D:\חומר c#\BuyMe\BuyMe\BL\bin\Debug\BL.dll
+D:\חומר c#\BuyMe\BuyMe\BL\bin\Debug\BL.pdb
+D:\חומר c#\BuyMe\BuyMe\BL\bin\Debug\DAL.dll
+D:\חומר c#\BuyMe\BuyMe\BL\bin\Debug\DTO.dll
+D:\חומר c#\BuyMe\BuyMe\BL\bin\Debug\EntityFramework.dll
+D:\חומר c#\BuyMe\BuyMe\BL\bin\Debug\DAL.pdb
+D:\חומר c#\BuyMe\BuyMe\BL\bin\Debug\DAL.dll.config
+D:\חומר c#\BuyMe\BuyMe\BL\bin\Debug\DTO.pdb
+D:\חומר c#\BuyMe\BuyMe\BL\bin\Debug\EntityFramework.xml
+D:\חומר c#\BuyMe\BuyMe\BL\obj\Debug\BL.csprojAssemblyReference.cache
+D:\חומר c#\BuyMe\BuyMe\BL\obj\Debug\BL.csproj.CoreCompileInputs.cache
+D:\חומר c#\BuyMe\BuyMe\BL\obj\Debug\BL.csproj.CopyComplete
+D:\חומר c#\BuyMe\BuyMe\BL\obj\Debug\BL.dll
+D:\חומר c#\BuyMe\BuyMe\BL\obj\Debug\BL.pdb

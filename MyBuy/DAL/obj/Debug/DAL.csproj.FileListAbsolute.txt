@@ -1,0 +1,14 @@
+D:\חומר c#\BuyMe\BuyMe\DAL\bin\Debug\DAL.dll.config
+D:\חומר c#\BuyMe\BuyMe\DAL\bin\Debug\DAL.dll
+D:\חומר c#\BuyMe\BuyMe\DAL\bin\Debug\DAL.pdb
+D:\חומר c#\BuyMe\BuyMe\DAL\bin\Debug\DTO.dll
+D:\חומר c#\BuyMe\BuyMe\DAL\bin\Debug\EntityFramework.dll
+D:\חומר c#\BuyMe\BuyMe\DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\חומר c#\BuyMe\BuyMe\DAL\bin\Debug\DTO.pdb
+D:\חומר c#\BuyMe\BuyMe\DAL\bin\Debug\EntityFramework.xml
+D:\חומר c#\BuyMe\BuyMe\DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\חומר c#\BuyMe\BuyMe\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+D:\חומר c#\BuyMe\BuyMe\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\חומר c#\BuyMe\BuyMe\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\חומר c#\BuyMe\BuyMe\DAL\obj\Debug\DAL.dll
+D:\חומר c#\BuyMe\BuyMe\DAL\obj\Debug\DAL.pdb
