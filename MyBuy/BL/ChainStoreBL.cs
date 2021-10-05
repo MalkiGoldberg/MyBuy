@@ -10,6 +10,7 @@ namespace BL
     {
         public DTO.ChainStoreDTO  GetChainStore(int id)
         {
+
             return Converts.ChainStoreConverts.GetChainStoreDTOFromDAL(new DAL.ChainStoreDAL().GetChainStore(id));
         }
         public List<DTO.ChainStoreDTO> GetChainStores()
