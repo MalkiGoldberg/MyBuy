@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DAL;
+using DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,7 +22,24 @@ namespace BL.Converts
             proofPurchaseDTO.paymentId = proofPurchase.paymentId;
            // proofPurchaseDTO.numPayment = proofPurchase.numPayment;
             proofPurchaseDTO.sum = proofPurchase.sum;
+            proofPurchaseDTO.img = proofPurchase.img;
             return proofPurchaseDTO;
+        }
+
+        public static ProofPurchase GetProofPurchaseDalFromDTO(ProofPurchaseDTO proofPurchaseDTO)
+        {
+            ProofPurchase proofPurchase= new ProofPurchase();
+            proofPurchase.proofPurchaseId = proofPurchaseDTO.proofPurchaseId;
+            proofPurchase.idAction = proofPurchaseDTO.idAction;
+            proofPurchase.idUsers = proofPurchaseDTO.idUsers;
+            proofPurchase.idCategory = proofPurchaseDTO.idCategory;
+            proofPurchase.date = proofPurchaseDTO.date;
+            proofPurchase.isActive = proofPurchaseDTO.isActive;
+            proofPurchase.paymentId = proofPurchaseDTO.paymentId;
+            // proofPurchDTO.numPayment = proofPurchase.numPayment;
+            proofPurchase.sum = proofPurchaseDTO.sum;
+            proofPurchase.img = proofPurchaseDTO.img;
+            return proofPurchase;
         }
 
         public static List<DTO.ProofPurchaseDTO> GetProofPurchasesDTOFromDal(List<DAL.ProofPurchase>proofPurchases)

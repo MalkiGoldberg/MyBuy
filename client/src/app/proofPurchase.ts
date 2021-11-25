@@ -10,6 +10,7 @@ export interface ProofPurchase{
     paymentId:number,
     numPayment:number,
     sum:number//double
+    img:string;
 
 
 }

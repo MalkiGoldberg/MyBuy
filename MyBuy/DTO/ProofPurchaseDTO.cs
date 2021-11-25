@@ -17,6 +17,7 @@ namespace DTO
         public int paymentId { get; set; }
         public Nullable<int> numPayment { get; set; }
         public double sum { get; set; }
+        public string img { get; set; }
 
     }
 }

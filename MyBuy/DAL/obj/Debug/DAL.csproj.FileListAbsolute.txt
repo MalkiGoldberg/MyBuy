@@ -12,3 +12,31 @@ D:\חומר c#\BuyMe\BuyMe\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 D:\חומר c#\BuyMe\BuyMe\DAL\obj\Debug\DAL.csproj.CopyComplete
 D:\חומר c#\BuyMe\BuyMe\DAL\obj\Debug\DAL.dll
 D:\חומר c#\BuyMe\BuyMe\DAL\obj\Debug\DAL.pdb
+C:\Users\User\Desktop\MyBuy\MyBuy\DAL\bin\Debug\DAL.dll.config
+C:\Users\User\Desktop\MyBuy\MyBuy\DAL\bin\Debug\DAL.dll
+C:\Users\User\Desktop\MyBuy\MyBuy\DAL\bin\Debug\DAL.pdb
+C:\Users\User\Desktop\MyBuy\MyBuy\DAL\bin\Debug\DTO.dll
+C:\Users\User\Desktop\MyBuy\MyBuy\DAL\bin\Debug\EntityFramework.dll
+C:\Users\User\Desktop\MyBuy\MyBuy\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\User\Desktop\MyBuy\MyBuy\DAL\bin\Debug\DTO.pdb
+C:\Users\User\Desktop\MyBuy\MyBuy\DAL\bin\Debug\EntityFramework.xml
+C:\Users\User\Desktop\MyBuy\MyBuy\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\User\Desktop\MyBuy\MyBuy\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\User\Desktop\MyBuy\MyBuy\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\MyBuy\MyBuy\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\User\Desktop\MyBuy\MyBuy\DAL\obj\Debug\DAL.dll
+C:\Users\User\Desktop\MyBuy\MyBuy\DAL\obj\Debug\DAL.pdb
+D:\MyBuy\MyBuy\DAL\bin\Debug\DAL.dll.config
+D:\MyBuy\MyBuy\DAL\bin\Debug\DAL.dll
+D:\MyBuy\MyBuy\DAL\bin\Debug\DAL.pdb
+D:\MyBuy\MyBuy\DAL\bin\Debug\DTO.dll
+D:\MyBuy\MyBuy\DAL\bin\Debug\EntityFramework.dll
+D:\MyBuy\MyBuy\DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\MyBuy\MyBuy\DAL\bin\Debug\DTO.pdb
+D:\MyBuy\MyBuy\DAL\bin\Debug\EntityFramework.xml
+D:\MyBuy\MyBuy\DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\MyBuy\MyBuy\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+D:\MyBuy\MyBuy\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\MyBuy\MyBuy\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\MyBuy\MyBuy\DAL\obj\Debug\DAL.dll
+D:\MyBuy\MyBuy\DAL\obj\Debug\DAL.pdb

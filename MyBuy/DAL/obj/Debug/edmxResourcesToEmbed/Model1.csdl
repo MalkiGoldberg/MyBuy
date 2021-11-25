@@ -91,6 +91,7 @@
     <NavigationProperty Name="Category" Relationship="Self.FK_ProofPurchase_Category" FromRole="ProofPurchase" ToRole="Category" />
     <NavigationProperty Name="Payment" Relationship="Self.FK_ProofPurchase_Payment" FromRole="ProofPurchase" ToRole="Payment" />
     <NavigationProperty Name="User" Relationship="Self.FK_ProofPurchase_Users" FromRole="ProofPurchase" ToRole="Users" />
+    <Property Name="img" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="RecyclingBasket">
     <Key>

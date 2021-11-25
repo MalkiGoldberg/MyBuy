@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,6 +11,7 @@ namespace API.Controllers
     [System.Web.Http.Cors.EnableCors(origins: "*", headers: "*", methods: "*")]
     public class ProofPurchaseController:ApiController
     {
+        BL.ProofPurchaseBL proofPurchaseBL = new BL.ProofPurchaseBL();
         [HttpGet]
         [Route("api/ProofPurchase/GetNumberOfProofPruchase")]
         public int GetNumberOfProofPruchase(int idAction,string idUser)
@@ -37,9 +39,16 @@ namespace API.Controllers
             filterProofDTO.idUser = idUser;
             filterProofDTO.kindOfPayment = kindOfPayment;
             filterProofDTO.recycling = recycling;
-            BL.ProofPurchaseBL proofPurchaseBL = new BL.ProofPurchaseBL();
+           
             return proofPurchaseBL.GetProofPurchases(filterProofDTO);
         }
-        
+
+        [HttpPost]
+        public bool PostProofPurchase(ProofPurchaseDTO proofPurchase)
+        {
+            return proofPurchaseBL.PostProofPurchases(proofPurchase);
+
+        }
+
     }
 }

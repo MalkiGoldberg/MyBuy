@@ -8,13 +8,13 @@ namespace DAL
 {
     public class ProofPurchaseDal
     {
-        public int GetProofPurchase(int idAction,string idUser)
+        public int GetProofPurchase(int idAction, string idUser)
         {
             try
             {
                 using (MyBuyEntities db = new MyBuyEntities())
                 {
-                    return db.ProofPurchases.Count(i => i.idAction == idAction&&i.idUsers==idUser);
+                    return db.ProofPurchases.Count(i => i.idAction == idAction && i.idUsers == idUser);
                 }
             }
             catch (Exception)
@@ -38,10 +38,10 @@ namespace DAL
                         && a.date >= filterProofDTO.beginDate && a.date <= filterProofDTO.endDate).ToList();
                     else
                         list = db.ProofPurchases.Where(a => a.idAction == filterProofDTO.action &&
-                        a.idBranch == filterProofDTO.branch &&a.idCategory == filterProofDTO.category 
+                        a.idBranch == filterProofDTO.branch && a.idCategory == filterProofDTO.category
                         && a.idUsers == filterProofDTO.idUser && a.paymentId == filterProofDTO.kindOfPayment
                         && a.date >= filterProofDTO.beginDate && a.date <= filterProofDTO.endDate
-                        &&a.isActive==true).ToList();
+                        && a.isActive == true).ToList();
                     return list;
                 }
             }
@@ -52,5 +52,23 @@ namespace DAL
             }
         }
 
+        public bool PostProofPurchase(ProofPurchase proofPurchase)
+        {
+            using (MyBuyEntities db = new MyBuyEntities())
+            {
+                db.ProofPurchases.Add(proofPurchase);
+                try
+                {
+                    db.SaveChanges();
+                    return true;
+                }
+                catch (Exception e)
+                {
+
+                    throw e;
+                   
+                }
+            }
+        }
     }
 }

@@ -35,7 +35,7 @@ export class FilterProofComponent implements OnInit {
     this.StoreService.GetActions().subscribe(response=>this.arrActions=response)
     
   }
-  check(date:Date){debugger;}
+  check(){debugger;}
   chooseChainStore(chainId:number){
   this.arrBranches=this.arrBranches.filter(arr=>arr.idChainStore==chainId) ;
  console.log(this.filter.chainStore);

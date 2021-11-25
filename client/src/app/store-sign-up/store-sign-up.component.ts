@@ -4,7 +4,7 @@ import { Manager } from '../manager';
 import { StoreService } from '../store.service';
 import { Branch } from '../branch';
 import { LoginServiceService } from '../login-service.service';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-store-sign-up',
@@ -16,7 +16,7 @@ export class StoreSignUpComponent implements OnInit {
   manager: Manager={managerId:"",firstName:"",lastName:"",mail:"",phone:""};
   m:Manager|undefined;
 
-  constructor(private loginServiceService:LoginServiceService) {
+  constructor(private loginServiceService:LoginServiceService,private router:Router) {
    
    }
   ngOnInit(): void {
@@ -36,6 +36,7 @@ export class StoreSignUpComponent implements OnInit {
     if (response==true)
     {localStorage.setItem("currentManager", JSON.stringify(this.manager));
     console.log("yes");
+    this.router.navigateByUrl("/filterProof");
     
 }
     else console.log("the sign up didn't succeed");

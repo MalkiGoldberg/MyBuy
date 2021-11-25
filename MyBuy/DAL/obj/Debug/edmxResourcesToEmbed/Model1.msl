@@ -73,6 +73,7 @@
     <EntitySetMapping Name="ProofPurchases">
       <EntityTypeMapping TypeName="MyBuyModel.ProofPurchase">
         <MappingFragment StoreEntitySet="ProofPurchase">
+          <ScalarProperty Name="img" ColumnName="img" />
           <ScalarProperty Name="proofPurchaseId" ColumnName="proofPurchaseId" />
           <ScalarProperty Name="idAction" ColumnName="idAction" />
           <ScalarProperty Name="idUsers" ColumnName="idUsers" />

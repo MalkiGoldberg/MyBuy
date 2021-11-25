@@ -24,6 +24,7 @@ namespace DAL
         public int paymentId { get; set; }
         public double sum { get; set; }
         public string numPayment { get; set; }
+        public string img { get; set; }
     
         public virtual Action Action { get; set; }
         public virtual Branch Branch { get; set; }

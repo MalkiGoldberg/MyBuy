@@ -17,13 +17,10 @@ export class ProofPurchaseComponent implements OnInit {
    }
 
   ngOnInit(): void {
-   /* this.getProofPurchases();*/
+  
 
   }
-  //להעביר את הפונקציה לקומפוננטה filter
-  /*
-  getProofPurchases(): void {
-    this.proofPurchase.getProofPruchases(this.filter)
-    .subscribe(proof => this.ProofPruchasesArr =proof);
-}*/
+
+  img:string=""
+ 
 }

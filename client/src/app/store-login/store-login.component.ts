@@ -1,6 +1,6 @@
 import { mergeNsAndName } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Branch } from '../branch';
 import { LoginServiceService } from '../login-service.service';
@@ -15,8 +15,15 @@ import { StoreService } from '../store.service';
 export class StoreLoginComponent implements OnInit {
 
   f:string="";
-  constructor(private store: StoreService,private router:Router) { }
+  userType:string="";
+  constructor(private store: StoreService,private router:Router, private activatedRoute:ActivatedRoute) { }
   ngOnInit(): void {
+this.activatedRoute.params.subscribe(p=>
+  {
+    this.userType=p.userType;
+    console.log(this.userType)
+  }
+  )
   }
   login(userName: string, password: string) {
     this.store.login(userName, password).subscribe(branch => {

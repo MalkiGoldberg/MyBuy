@@ -12,9 +12,9 @@ import { NewStoreComponent } from './new-store/new-store.component';
 const routes: Routes = [
   {path:"enter",component:EnterComponent},
   {path:"newStore",component:NewStoreComponent},
-  {path:"login",component:StoreLoginComponent},
+  {path:"login/:userType",component:StoreLoginComponent},
   {path:"proofPurchase",component:ProofPurchaseComponent},
-  {path:"signup",component:StoreSignUpComponent},
+  {path:"signup/:userType",component:StoreSignUpComponent},
   {path:"home",component:HomeComponent},
 {path:"definitions",component:DefinitionsComponent},
 {path:"filterProof",component:FilterProofComponent},

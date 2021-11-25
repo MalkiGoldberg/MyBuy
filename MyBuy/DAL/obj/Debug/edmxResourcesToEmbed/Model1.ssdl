@@ -76,6 +76,7 @@
     <Property Name="paymentId" Type="int" Nullable="false" />
     <Property Name="sum" Type="float" Nullable="false" />
     <Property Name="numPayment" Type="nchar" MaxLength="10" />
+    <Property Name="img" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="RecyclingBasket">
     <Key>

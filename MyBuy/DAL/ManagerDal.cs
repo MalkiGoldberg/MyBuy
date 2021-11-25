@@ -45,7 +45,7 @@ namespace DAL
             {
                 using (MyBuyEntities db = new MyBuyEntities())
                 {
-                    db.Managers.Add(manager);
+                     db.Managers.Add(manager);
                     db.SaveChanges();
                     return true;
                 }

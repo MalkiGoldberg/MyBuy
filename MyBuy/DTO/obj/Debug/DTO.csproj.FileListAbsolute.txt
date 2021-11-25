@@ -4,3 +4,9 @@ D:\חומר c#\BuyMe\BuyMe\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 D:\חומר c#\BuyMe\BuyMe\DTO\obj\Debug\DTO.dll
 D:\חומר c#\BuyMe\BuyMe\DTO\obj\Debug\DTO.pdb
 D:\חומר c#\BuyMe\BuyMe\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+D:\MyBuy\MyBuy\DTO\bin\Debug\DTO.dll
+D:\MyBuy\MyBuy\DTO\bin\Debug\DTO.pdb
+D:\MyBuy\MyBuy\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+D:\MyBuy\MyBuy\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\MyBuy\MyBuy\DTO\obj\Debug\DTO.dll
+D:\MyBuy\MyBuy\DTO\obj\Debug\DTO.pdb

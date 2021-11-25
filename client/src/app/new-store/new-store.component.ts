@@ -21,7 +21,8 @@ public branch:Branch={branchId:1,
   phone:"",
   userName:"",
 Categories:[]};
-t=localStorage.getItem("currentManager");
+//-------------------
+t=JSON.parse(localStorage.getItem("currentManager")!);
 chainStore:number=1;
 categories:number[]=[];
 i:number[]=[1,2,3];
