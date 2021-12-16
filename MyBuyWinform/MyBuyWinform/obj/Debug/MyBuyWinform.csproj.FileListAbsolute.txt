@@ -1,0 +1,13 @@
+D:\MyBuy\MyBuyWinform\MyBuyWinform\bin\Debug\MyBuyWinform.exe.config
+D:\MyBuy\MyBuyWinform\MyBuyWinform\bin\Debug\MyBuyWinform.exe
+D:\MyBuy\MyBuyWinform\MyBuyWinform\bin\Debug\MyBuyWinform.pdb
+D:\MyBuy\MyBuyWinform\MyBuyWinform\bin\Debug\RestSharp.dll
+D:\MyBuy\MyBuyWinform\MyBuyWinform\bin\Debug\RestSharp.xml
+D:\MyBuy\MyBuyWinform\MyBuyWinform\obj\Debug\MyBuyWinform.csprojAssemblyReference.cache
+D:\MyBuy\MyBuyWinform\MyBuyWinform\obj\Debug\MyBuyWinform.Form1.resources
+D:\MyBuy\MyBuyWinform\MyBuyWinform\obj\Debug\MyBuyWinform.Properties.Resources.resources
+D:\MyBuy\MyBuyWinform\MyBuyWinform\obj\Debug\MyBuyWinform.csproj.GenerateResource.cache
+D:\MyBuy\MyBuyWinform\MyBuyWinform\obj\Debug\MyBuyWinform.csproj.CoreCompileInputs.cache
+D:\MyBuy\MyBuyWinform\MyBuyWinform\obj\Debug\MyBuyWinform.csproj.CopyComplete
+D:\MyBuy\MyBuyWinform\MyBuyWinform\obj\Debug\MyBuyWinform.exe
+D:\MyBuy\MyBuyWinform\MyBuyWinform\obj\Debug\MyBuyWinform.pdb

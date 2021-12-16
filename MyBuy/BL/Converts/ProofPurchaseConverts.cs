@@ -15,6 +15,8 @@ namespace BL.Converts
             DTO.ProofPurchaseDTO proofPurchaseDTO = new DTO.ProofPurchaseDTO();
             proofPurchaseDTO.proofPurchaseId = proofPurchase.proofPurchaseId;
             proofPurchaseDTO.idAction = proofPurchase.idAction;
+            proofPurchaseDTO.idBranch = proofPurchase.idBranch;
+
             proofPurchaseDTO.idUsers = proofPurchase.idUsers;
             proofPurchaseDTO.idCategory = proofPurchase.idCategory;
             proofPurchaseDTO.date = proofPurchase.date;
@@ -31,6 +33,7 @@ namespace BL.Converts
             ProofPurchase proofPurchase= new ProofPurchase();
             proofPurchase.proofPurchaseId = proofPurchaseDTO.proofPurchaseId;
             proofPurchase.idAction = proofPurchaseDTO.idAction;
+            proofPurchase.idBranch = proofPurchaseDTO.idBranch;
             proofPurchase.idUsers = proofPurchaseDTO.idUsers;
             proofPurchase.idCategory = proofPurchaseDTO.idCategory;
             proofPurchase.date = proofPurchaseDTO.date;

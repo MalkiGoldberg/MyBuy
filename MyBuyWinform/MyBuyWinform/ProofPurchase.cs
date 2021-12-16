@@ -9,6 +9,7 @@ namespace MyBuyWinform
     public class ProofPurchase
     {
         public int proofPurchaseId { get; set; }
+
         public int idAction { get; set; }
         public string idUsers { get; set; }
         public Nullable<int> idCategory { get; set; }
@@ -18,6 +19,10 @@ namespace MyBuyWinform
         public Nullable<int> numPayment { get; set; }
         public double sum { get; set; }
         public string img { get; set; }
+        public ProofPurchase()
+        {
+                    
+        }
 
     }
 }

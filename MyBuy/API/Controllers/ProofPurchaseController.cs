@@ -44,11 +44,13 @@ namespace API.Controllers
         }
 
         [HttpPost]
+        [Route("api/ProofPurchase/PostProofPruchase")]
         public bool PostProofPurchase(ProofPurchaseDTO proofPurchase)
         {
             return proofPurchaseBL.PostProofPurchases(proofPurchase);
 
         }
+
 
     }
 }

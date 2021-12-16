@@ -11,6 +11,7 @@ namespace DTO
         public int proofPurchaseId { get; set; }
         public int idAction { get; set; }
         public string idUsers { get; set; }
+        public int idBranch { get; set; }
         public Nullable<int> idCategory { get; set; }
         public System.DateTime date { get; set; }
         public Nullable<bool> isActive { get; set; }

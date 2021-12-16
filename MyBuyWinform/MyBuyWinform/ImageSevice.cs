@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace MyBuyWinform
 {
-   public class ImageSevice
+    public class ImageSevice
     {
         public string ImgToBase64(string path)
         {
@@ -26,5 +27,9 @@ namespace MyBuyWinform
             }
 
         }
+      
+
+
+
     }
 }

@@ -21,5 +21,11 @@ namespace MyBuyWinform
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ProofPurchaseService proofPurchaseService = new ProofPurchaseService();
+            proofPurchaseService.GenerateProofPurchase();
+        }
     }
 }
