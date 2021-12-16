@@ -63,6 +63,8 @@
     <Property Name="phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="ChainStores" Relationship="Self.FK_ChainStore_Managers" FromRole="Managers" ToRole="ChainStore" />
+    <Property Name="userName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="Payment">
     <Key>

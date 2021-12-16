@@ -15,6 +15,9 @@ namespace BL.Converts
             managersDTO.firstName = manager.firstName;
             managersDTO.lastName = manager.lastName;
             managersDTO.mail = manager.mail;
+            managersDTO.phone = manager.phone;
+            managersDTO.password = manager.password;
+            managersDTO.userName = manager.userName;
             return managersDTO;
         }
 
@@ -34,6 +37,9 @@ namespace BL.Converts
             manager.firstName = managerDTO.firstName;
             manager.lastName = managerDTO.lastName;
             manager.mail = managerDTO.mail;
+            manager.phone = managerDTO.phone;
+            manager.password = managerDTO.password;
+            manager.userName = managerDTO.userName;
             return manager;
         }
     }

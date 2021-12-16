@@ -54,6 +54,8 @@
     <EntitySetMapping Name="Managers">
       <EntityTypeMapping TypeName="MyBuyModel.Manager">
         <MappingFragment StoreEntitySet="Managers">
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="userName" ColumnName="userName" />
           <ScalarProperty Name="managerId" ColumnName="managerId" />
           <ScalarProperty Name="firstName" ColumnName="firstName" />
           <ScalarProperty Name="lastName" ColumnName="lastName" />

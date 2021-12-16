@@ -25,6 +25,8 @@ namespace DAL
         public string lastName { get; set; }
         public string phone { get; set; }
         public string mail { get; set; }
+        public string userName { get; set; }
+        public string password { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChainStore> ChainStores { get; set; }
