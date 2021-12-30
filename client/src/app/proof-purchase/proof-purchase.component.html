@@ -1,14 +1,3 @@
 <div *ngFor="let item of ProofPruchasesArr">
-  <div>
-    {{item.proofPurchase}}
-    {{item.idAction}}
-    {{item.idUser}}
-    {{item.idCategory}}
-    {{item.date}}
-    {{item.isActive}}
-    {{item.paymentId}}
-    {{item.numPayment}}
-    {{item.sum}}
-    <!-- <img [src]="item.img"> -->
-  </div>
+  <app-single-proof [item]="item"></app-single-proof>
 </div>

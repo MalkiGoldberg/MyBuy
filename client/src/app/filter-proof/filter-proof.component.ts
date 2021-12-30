@@ -41,7 +41,4 @@ export class FilterProofComponent implements OnInit {
  console.log(this.filter.chainStore);
   }
  
-  getProofPurchases(): void {
-    this.ProofPruchaseService.getProofPruchases(this.filter)
-    .subscribe(proof => this.ProofPruchaseArr =proof);
-}}
+}

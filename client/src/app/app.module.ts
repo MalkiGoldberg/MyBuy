@@ -14,6 +14,7 @@ import { FilterProofComponent } from './filter-proof/filter-proof.component';
 import { DefinitionsComponent } from './definitions/definitions.component';
 import { EnterComponent } from './enter/enter.component';
 import { NewStoreComponent } from './new-store/new-store.component';
+import { SingleProofComponent } from './single-proof/single-proof.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { NewStoreComponent } from './new-store/new-store.component';
     DefinitionsComponent,
  
     EnterComponent,
-    NewStoreComponent
+    NewStoreComponent,
+    SingleProofComponent
   ],
   imports: [
     HttpClientModule,
