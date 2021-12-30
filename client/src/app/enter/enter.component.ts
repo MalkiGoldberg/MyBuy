@@ -22,7 +22,7 @@ export class EnterComponent implements OnInit {
     this.router.navigateByUrl("/signup/user");
     else if(this.kindUser=="store"&&enterType=="signIn")
     this.router.navigateByUrl("/login/store");
-    else if(this.kindUser=="customer"&&enterType=="signIn")
+    // else if(this.kindUser=="customer"&&enterType=="signIn")
     
   }
 

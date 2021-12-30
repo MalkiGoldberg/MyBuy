@@ -49,8 +49,8 @@
 
 
 
- <button routerLink="/proofPurchase" >
-    <app-proof-purchase [filter]="this.filter"></app-proof-purchase>
+ <button  [routerLink]="['/proofPurchase']" [queryParams]="{FilterProof:'filter'}">
+    
     סנן</button><br/>
 <p>יש לך</p>
 <p>{{this.acquittal}}</p>
