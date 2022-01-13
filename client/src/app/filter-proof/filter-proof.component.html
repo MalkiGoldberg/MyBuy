@@ -32,7 +32,7 @@
 <!-- התאריך לא מתעדכן -->
 <label>:מתאריך</label><br/>
 
-<!-- <input type="date" [ngModel] ="filter.beginDate | date:'yyyy-MM-dd'" (change)="check($event)"> -->
+ <input type="date" value="עד תאריך" [(ngModel)]="filter.beginDate" name="beginDate"> 
 
 <label>עד תאריך</label>
 <input type="date" value="עד תאריך"[(ngModel)]="filter.endDate" name="date"><br/>

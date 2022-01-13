@@ -21,16 +21,17 @@ namespace API.Controllers
         }
         [HttpGet]
         [Route("api/ProofPurchase/GetProofPruchases")]
-        public List<DTO.ProofPurchaseDTO> GetProofPruchases(string idUser,int kindOfPayment,int action,int category,
-             int chainStore,int branch,DateTime beginDate,DateTime endDate,bool recycling)
-        {
+        public List<DTO.ProofPurchaseDTO> GetProofPruchases(string idUser, int action, int category, int kindOfPayment, int chainStore, int branch, DateTime beginDate, DateTime endDate, bool recycling)
+         /*
+            int chainStore,int branch,DateTime beginDate,DateTime endDate,bool recycling)
+   */     {
 /*
             HttpPostedFile imageData = HttpContext.Current.Request.Files[0];
             imageData.SaveAs(HostingEnvironment.MapPath("/Images/"imageData.FileName));
 */
 
             DTO.FilterProofDTO filterProofDTO = new DTO.FilterProofDTO();
-            filterProofDTO.action = action;
+          /*  filterProofDTO.action = action;
             filterProofDTO.beginDate = beginDate;
             filterProofDTO.branch = branch;
             filterProofDTO.category = category;
@@ -39,7 +40,7 @@ namespace API.Controllers
             filterProofDTO.idUser = idUser;
             filterProofDTO.kindOfPayment = kindOfPayment;
             filterProofDTO.recycling = recycling;
-           
+         */  
             return proofPurchaseBL.GetProofPurchases(filterProofDTO);
         }
 
