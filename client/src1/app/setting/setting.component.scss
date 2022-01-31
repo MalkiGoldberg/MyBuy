@@ -1,0 +1,38 @@
+table {
+    border-collapse: collapse;
+    margin-left: 300px;
+    margin-top: 100px;
+    width: 900px;
+    height: 200px;
+  }
+  
+  td {
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    padding: 0.3rem;
+  }
+  th{
+    text-align: center;
+    border-bottom: 3px solid #ddd;
+    font-size: larger;
+    // border: 1px solid #999;
+
+  }
+  .add{
+    width: 100px;
+    margin-left: 700px;
+    margin-top: 100px;
+  }
+  button{
+margin-left: 48%;
+
+  }
+  .edit{
+    margin-left: 90%;
+
+  }
+
+  select{
+    width: 20px;
+    height: 20px;
+  }

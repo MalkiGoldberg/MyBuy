@@ -7,11 +7,13 @@ import { NewBranchComponent } from './new-branch/new-branch.component';
 import { ProofPurchaseComponent } from './proof-purchase/proof-purchase.component';
 import { StoreLoginComponent } from './store-login/store-login.component';
 import { StoreSignUpComponent } from './store-sign-up/store-sign-up.component';
-import{EnterComponent}from'./enter/enter.component';
+
 import { NewStoreComponent } from './new-store/new-store.component';
+import { SettingComponent } from './setting/setting.component';
+
 const routes: Routes = [
-  {path:"enter",component:EnterComponent},
-  {path:"newStore",component:NewStoreComponent},
+  {path:"setting",component:SettingComponent},
+  {path:"new-store",component:NewStoreComponent},
   {path:"login/:userType",component:StoreLoginComponent},
   {path:"proofPurchase",component:ProofPurchaseComponent},
   {path:"signup/:userType",component:StoreSignUpComponent},

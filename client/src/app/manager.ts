@@ -3,5 +3,7 @@ export interface Manager{
     firstName:string,
     lastName:string,
     mail:string,
-    phone:string
+    phone:string,
+    userName:string;
+    password:string
 }

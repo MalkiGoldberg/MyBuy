@@ -30,5 +30,16 @@ namespace API.Controllers
             return managerBL.Login(managersDTO);
         }
 
+        [HttpGet]
+        [Route("api/Manager/SignUp")]
+        public string SignUp(string userName, string password)
+        {
+            DTO.ManagersDTO managersDTO= new DTO.ManagersDTO();
+            managersDTO.userName = userName;
+            managersDTO.password = password;
+            return new BL.ManagerBL().SignUp(managersDTO);
+         
+           
+        }
     }
 }

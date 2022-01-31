@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
-
+import{Manager}from'./manager';
 import { Branch } from './branch';
 import { Category } from './category';
 import { ChainStore } from './chainStore';
@@ -37,7 +37,7 @@ return this.http.get<Branch>("https://localhost:44391/api/Branch/SignUp",{params
     return  this.http.get<Category[]>("https://localhost:44391/api/GetCategories") ;
   }
   GetBranches():Observable<Branch[]>
-  {
+  {debugger;
     return  this.http.get<Branch[]>("https://localhost:44391/api/Branch/GetBranches") ;
   }
   GetChainStores():Observable<ChainStore[]>
@@ -65,4 +65,25 @@ return this.http.get<Payment[]>("https://localhost:44391/api/Payment/GetPayments
         return this.http.post<Branch>("https://localhost:44391/api/Branch/signUpBranch",branch);
         
       }
+      loginManager(username:string,password:string):Observable<String>{
+        const params=new HttpParams({
+          fromObject:{
+            username:username,
+            password:password
+          }
+        })
+        return this.http.get<String>("https://localhost:44391/api/Manager/SignUp",{params:params})
+      }
+      settingBranches():Observable<Branch[]> {
+        return this.http.get<Branch[]>("https://localhost:44391/api/signUpBranches");
+        
+      }
+      GetChainStore():Observable<ChainStore[]>{
+        return this.http.get<ChainStore[]>("https://localhost:44391/api/GetChainStores");
+      }
+      GetBranch(id:number):Observable<Branch> {
+        return this.http.get<Branch>("https://localhost:44391/api/GetBranch");
+        
+      }
+      
 }

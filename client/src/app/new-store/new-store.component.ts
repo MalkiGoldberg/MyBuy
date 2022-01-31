@@ -3,6 +3,7 @@ import { StoreService } from '../store.service';
 import { Category} from "../category"
 import {ChainStore} from "../chainStore"
 import { Branch } from '../branch';
+import { ActivatedRoute, Params,Router  } from '@angular/router';
 @Component({
   selector: 'app-new-store',
   templateUrl: './new-store.component.html',
@@ -11,35 +12,40 @@ import { Branch } from '../branch';
 export class NewStoreComponent implements OnInit {
 arrCategories:Category[]=[];
 arrChainStore:ChainStore[]=[];
-public branch:Branch={branchId:1,
+public branch:Branch={
+  branchId:0,
   branchName:"",
   city:"",
   address:"",
   password:"",
   idManager:"",
-  idChainStore:1,
+  idChainStore:0,
   phone:"",
   userName:"",
-Categories:[]};
-//-------------------
-t=JSON.parse(localStorage.getItem("currentManager")!);
+  Categories:[]
+};
 chainStore:number=1;
 categories:number[]=[];
-i:number[]=[1,2,3];
-  constructor(private store:StoreService) { }
+  constructor(private store:StoreService, private router:Router,private route: ActivatedRoute
+    ) { }
 
-  ngOnInit() {
-    
+  ngOnInit(): void {
+    debugger; 
+    this.route.queryParams.subscribe(params => {if (params.branch != undefined) 
+      {
+        //params  ובתוכה לשלוח את  getBranchId  לקרוא לפונקציה מהסרוויס 
+      //  this.branch= this.store.GetBranch(params['branch.branchId']);
+
+      }
     this.store.GetCategories().subscribe(categories => this.arrCategories=categories) ;
-  
-    
-    this.store.GetChainStores().subscribe(chainStore =>this.arrChainStore=chainStore
-   );
+    this.store.GetChainStore().subscribe(chainStore => this.arrChainStore=chainStore) ;
+   
+    });
+
   }
-click(){
-  debugger;
-}
+
   signUpBranch(userName:string,password:string,nameStore:string,phone:string,address:string,city:string){
+    
     this.branch.userName=userName;
     this.branch.password=password;
     this.branch.branchName=nameStore;
@@ -48,18 +54,31 @@ click(){
     this.branch.city=city;
     this.branch.idChainStore=this.chainStore;
     this.branch.Categories=this.categories;
- // this.branch.idManager=this.t;
+    //איך מקבלים אוביקט ב local storege
+   // this.branch.idManager=localStorage.getItem("currentManager");
+    
     return this.store.signUpBranch(this.branch)
-    .subscribe((response:any)=>this.saveBranch(response));
+    .subscribe((response:any)=>this.saveBranch(response)
+    );
+
 
   }
+
+  equal(pass1:string,pass2:string){
+    if(pass1!=pass2)
+    console.log("cascsc")
+    alert("the password is not currect!");
+  }
+
   saveBranch(response:boolean){
     if (response==true)
     {localStorage.setItem("currentBranch", JSON.stringify(this.branch));
     console.log("yes");
+    this.router.navigateByUrl("/setting");
 }
     else console.log("the sign up didn't succeed");
   }
 }
+
 
 

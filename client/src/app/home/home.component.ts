@@ -7,13 +7,10 @@ import { Branch } from '../branch';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-// ---איך מאתחלים
- public kindUser="";
+
   constructor() { }
 
   ngOnInit(): void {
   }
-enter(){
 
-}
 }

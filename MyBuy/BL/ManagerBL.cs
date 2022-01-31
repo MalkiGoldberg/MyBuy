@@ -22,5 +22,12 @@ namespace BL
             DAL.ManagerDal managerDal = new DAL.ManagerDal();
             return managerDal.Login(manager1);
         }
+        public string SignUp(DTO.ManagersDTO managersDTO)
+        {
+            DAL.Manager m = Converts.ManagerConverts.GetManagerDALFromDTO(managersDTO);
+            DAL.ManagerDal managerDAL = new DAL.ManagerDal();
+              return  managerDAL.SignUp(m);
+          
+        }
     }
 }

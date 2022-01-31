@@ -1,0 +1,21 @@
+<form (submit)="signUpBranch(username.value,password.value,nameStore.value,
+phone.value,address.value,city.value)">
+    <input type="text" value={{branch.branchId}} #username /><br/>
+    <input type="text" value={{branch.password}} #password/><br/>
+    <input type="text" value="אימות סיסמא" #vertificationPassword (onchange)="equal(password.value,vertificationPassword.value)"/><br/>
+    <input type="text" value={{branch.branchName}} #nameStore/><br/>
+    <input type="tel" value={{branch.phone}} #phone/><br/>
+    <input type="text" value={{branch.address}} #address/><br/>
+    <input type="text" value={{branch.city}} #city/><br/>
+    <!-- Category -->
+    <h3>קטגוריה</h3>
+    <!-- <div *ngFor="let category of arrCategories" ngModel="categories">
+        {{category.categoryName}} <input [value]=catregory.categoryId name="categorySelect" type="radio" />
+    </div> -->
+    <!-- ChainStore -->
+    <h3>שם רשת</h3>
+    <select name="ChainStoreSelect" [(ngModel)]="chainStore">
+        <option [value]=store.chineStoreId *ngFor="let store of arrChainStore" >{{store.nameChineStore}}
+    </select><br>
+    <button  type="submit" >שמירת נתונים</button>
+    </form>

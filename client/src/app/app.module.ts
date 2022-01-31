@@ -12,9 +12,11 @@ import { FormsModule } from '@angular/forms';
 import { NewBranchComponent } from './new-branch/new-branch.component';
 import { FilterProofComponent } from './filter-proof/filter-proof.component';
 import { DefinitionsComponent } from './definitions/definitions.component';
-import { EnterComponent } from './enter/enter.component';
+
 import { NewStoreComponent } from './new-store/new-store.component';
 import { SingleProofComponent } from './single-proof/single-proof.component';
+import { PasswordManagerComponent } from './password-manager/password-manager.component';
+import { SettingComponent } from './setting/setting.component';
 
 @NgModule({
   declarations: [
@@ -33,10 +35,10 @@ import { SingleProofComponent } from './single-proof/single-proof.component';
     FilterProofComponent,
  
     DefinitionsComponent,
- 
-    EnterComponent,
     NewStoreComponent,
-    SingleProofComponent
+    SingleProofComponent,
+    PasswordManagerComponent,
+    SettingComponent
   ],
   imports: [
     HttpClientModule,

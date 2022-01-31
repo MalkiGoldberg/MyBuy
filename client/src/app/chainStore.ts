@@ -1,6 +1,5 @@
 export interface ChainStore{
-    chainStoreId:number,
-    chainStoreName:string,
-    idManager:string
-
+    chineStoreId:number; 
+    nameChineStore:string; 
+    idManager:string; 
 }

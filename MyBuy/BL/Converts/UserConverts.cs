@@ -11,8 +11,7 @@ namespace BL.Converts
         public static DTO.UsersDTO GetUserDTOFromDal(DAL.User user)
         {
             DTO.UsersDTO usersDTO = new DTO.UsersDTO();
-            usersDTO.address = user.address;
-            usersDTO.city = user.city;
+           
             usersDTO.firstName = user.firstName;
             usersDTO.lastName = user.lastName;
             usersDTO.mail = user.mail;
@@ -30,6 +29,18 @@ namespace BL.Converts
                 usersDTOs.Add(GetUserDTOFromDal(item));
             }
             return usersDTOs;
+        }
+        public static DAL.User GetUserDALFromDTO(DTO.UserDTO userDTO)
+        {
+            DAL.User user = new DAL.User();
+           
+                user.lastName= userDTO.lastName;
+                user.mail=     userDTO.mail;
+                user.password= userDTO.password;
+                user.phone=    userDTO.phone;
+                user.userId=   userDTO.userId;
+                user.firstName=userDTO.firstName;
+            return user;
         }
     }
 }

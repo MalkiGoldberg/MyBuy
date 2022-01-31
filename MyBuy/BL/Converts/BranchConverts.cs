@@ -10,15 +10,19 @@ namespace BL.Converts
     {
         public static DTO.BranchDTO GetBranchDTOFromDAL(DAL.Branch branch)
         {
+           
             DTO.BranchDTO branchDTO = new DTO.BranchDTO();
-            branchDTO.address = branch.address;
-            branchDTO.branchId = branch.brachId;
-            branchDTO.branchName = branch.branchName;
-            branchDTO.city = branch.city;
-            branchDTO.idManager = branch.idManager;
-            branchDTO.phone = branch.phone;
-            branchDTO.idChainStore = branch.idChainStore;
-            branchDTO.Categories = branch.CategoryInBranches.Select(c => c.idCategory).ToList();
+            if (branch != null)
+            {
+                branchDTO.address = branch.address;
+                branchDTO.branchId = branch.brachId;
+                branchDTO.branchName = branch.branchName;
+                branchDTO.city = branch.city;
+                branchDTO.idManager = branch.idManager;
+                branchDTO.phone = branch.phone;
+                branchDTO.idChainStore = branch.idChainStore;
+                branchDTO.Categories = branch.CategoryInBranches.Select(c => c.idCategory).ToList();
+            }
             return branchDTO;
         }
         public static List<DTO.BranchDTO> GetBranchesDTOFromDAL(List<DAL.Branch> branches)

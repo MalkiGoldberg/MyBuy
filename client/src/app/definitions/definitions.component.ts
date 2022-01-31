@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./definitions.component.scss']
 })
 export class DefinitionsComponent implements OnInit {
-
+userAnswer:string="";
   constructor() { }
 
   ngOnInit(): void {
   }
-
+check(password:string){
+  if(!(password==localStorage.getItem("currentUserPassword")))
+this.userAnswer="הסיסמא שגויה";
+}
 }

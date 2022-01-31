@@ -105,8 +105,6 @@
     <Property Name="firstName" Type="nvarchar" MaxLength="50" />
     <Property Name="lastName" Type="nvarchar" MaxLength="50" />
     <Property Name="phone" Type="nvarchar" MaxLength="10" />
-    <Property Name="address" Type="nvarchar" MaxLength="20" />
-    <Property Name="city" Type="nvarchar" MaxLength="20" />
     <Property Name="mail" Type="nvarchar" MaxLength="50" />
     <Property Name="password" Type="nvarchar" MaxLength="16" Nullable="false" />
   </EntityType>

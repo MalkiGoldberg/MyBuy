@@ -39,6 +39,36 @@ namespace DAL
                 return null;
             }
         }
+        public bool Login(User user)
+        { 
+            try
+            {
+                using (MyBuyEntities db = new MyBuyEntities())
+                { 
+                  user   = db.Users.Single(br => br.userId == user.userId && br.password == user.password);
+                    return true;
+                }
+            }
+            catch
+            {
+                return false;
+            }
+        }
 
+        public bool SignUp(User user)
+        {
+            try
+            {
+                using (MyBuyEntities db = new MyBuyEntities())
+                {
+                    db.Users.Add(user);
+                    return true;
+                }
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }

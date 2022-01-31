@@ -33,7 +33,7 @@
 <label>:מתאריך</label><br/>
 
  <input type="date" value="עד תאריך" [(ngModel)]="filter.beginDate" name="beginDate"> 
-
+<!--איך מאתחלים ליום חודש ושנה-->
 <label>עד תאריך</label>
 <input type="date" value="עד תאריך"[(ngModel)]="filter.endDate" name="date"><br/>
 
@@ -45,11 +45,11 @@
 
 
 
- </form> 
-
+ </form>
+  <!--מאתחל את הסינון מחדש-->
 <a [routerLink]="['/proofPurchase']" [queryParams]="{FilterProof:filter|json}">{{filter.idUser}}</a>
 
- <button >
+ <button (click)="check()">
  
     
     סנן</button><br/>

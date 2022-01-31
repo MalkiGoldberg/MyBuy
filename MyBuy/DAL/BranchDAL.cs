@@ -38,7 +38,7 @@ namespace DAL
             catch
             {
 
-                return new Branch();
+                return null;        
             }
         }
         public List<Branch> GetBranches()

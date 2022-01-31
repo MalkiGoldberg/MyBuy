@@ -1,1 +1,4 @@
-<button routerLink="/signup">לשינוי סיסמא</button>
+<input #password type="text" value="הסיסמא הנוכחית"(click)="check(password.value)">
+<input #new1 type="text" value="הסיסמא החדשה">
+<!--<input #new2 type="text" value="אימות סיסמא"(click)="checkNewPassword(new1.value,new2.value)">-->
+ <input  name="userAnswer"[(ngModel)]="userAnswer"[value]="userAnswer"/>

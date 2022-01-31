@@ -5,7 +5,7 @@ export interface FilterProof{
     category:number,
     chainStore:number,
     branch:number,
-    beginDate:Date,
+    beginDate:Date|'dd/mm/yy',
     endDate:Date,
     recycling:boolean
 }

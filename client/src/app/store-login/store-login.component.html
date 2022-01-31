@@ -3,4 +3,8 @@
     <input type="text" #userName value="שם משתמש">
     <input type="password"#password value="סיסמא">
     <input type="submit" value="אישור">
+    <button (click)="newUser()">האם אתה לקוח חדש במערכת</button>
     </form>
+    <input  name="userAnswer"[(ngModel)]="userAnswer"[value]="userAnswer"/>
+    
+    

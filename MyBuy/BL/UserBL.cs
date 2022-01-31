@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,5 +19,20 @@ namespace BL
         {
             return Converts.UserConverts.GetUsersDTOFromDal(new DAL.UserDal().GetUsers());
         }
+        public bool Login (DTO.UserDTO userDTO)
+        {
+            DAL.User  user= Converts.UserConverts.GetUserDALFromDTO(userDTO);
+            DAL.UserDal userDAL = new DAL.UserDal();
+            return userDAL.Login(user);
+             
+        }
+
+        public bool SignUp(UserDTO userDTO)
+        {
+            DAL.User user = Converts.UserConverts.GetUserDALFromDTO(userDTO);
+            DAL.UserDal userDal = new DAL.UserDal();
+            return userDal.SignUp(user);
+        }
+       
     }
 }

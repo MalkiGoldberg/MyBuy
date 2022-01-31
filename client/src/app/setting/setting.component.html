@@ -1,0 +1,31 @@
+
+
+
+  <table>
+    <th></th>
+    <th></th>
+    <th>טלפון</th>
+    <th>כתובת</th>
+    <th>עיר</th>
+    <th>שם</th>
+    <th>קוד סניף</th>
+    <tr *ngFor="let branch of arrBranch">
+      <td>
+        <button class="edit" [routerLink]="['/new-store']" [queryParams]="{branch: branch.branchId}">עריכה</button> 
+       </td>
+       <td>
+         <button [routerLink]="['/setting']" (click)="removeBranch(branch)">מחיקה</button>
+       </td>
+       <td>{{branch.phone}}</td>
+       <td>{{branch.address}}</td>
+       <td>{{branch.city}}</td>
+       <td>{{branch.branchName}}</td>
+      <td>{{branch.branchId}}</td>
+    </tr>
+  </table>
+  <!-- לשנות לעריכה -->
+  <button class="add"  routerLink="/new-store">הוספה</button>
+  
+  
+ 
+

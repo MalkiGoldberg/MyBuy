@@ -31,7 +31,7 @@ namespace API.Controllers
 */
 
             DTO.FilterProofDTO filterProofDTO = new DTO.FilterProofDTO();
-          /*  filterProofDTO.action = action;
+            filterProofDTO.action = action;
             filterProofDTO.beginDate = beginDate;
             filterProofDTO.branch = branch;
             filterProofDTO.category = category;
@@ -40,7 +40,7 @@ namespace API.Controllers
             filterProofDTO.idUser = idUser;
             filterProofDTO.kindOfPayment = kindOfPayment;
             filterProofDTO.recycling = recycling;
-         */  
+          
             return proofPurchaseBL.GetProofPurchases(filterProofDTO);
         }
 

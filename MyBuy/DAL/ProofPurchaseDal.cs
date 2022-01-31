@@ -32,16 +32,18 @@ namespace DAL
                 {
                     List<ProofPurchase> list = new List<ProofPurchase>();
                     if (filterProofDTO.recycling == true)
-                        list = db.ProofPurchases.Where(a => a.idAction == filterProofDTO.action &&
-                         a.idBranch == filterProofDTO.branch && a.idCategory == filterProofDTO.category &&
-                         a.idUsers == filterProofDTO.idUser && a.paymentId == filterProofDTO.kindOfPayment
-                        && a.date >= filterProofDTO.beginDate && a.date <= filterProofDTO.endDate).ToList();
+                        list = db.ProofPurchases.Where(a => a.idAction == filterProofDTO.action && a.idBranch == filterProofDTO.branch && a.idCategory == filterProofDTO.category &&
+                         a.idUsers == filterProofDTO.idUser 
+                         && a.paymentId == filterProofDTO.kindOfPayment && a.date >= filterProofDTO.beginDate&& a.date <= filterProofDTO.endDate).ToList();
+                     
+                    
                     else
                         list = db.ProofPurchases.Where(a => a.idAction == filterProofDTO.action &&
                         a.idBranch == filterProofDTO.branch && a.idCategory == filterProofDTO.category
                         && a.idUsers == filterProofDTO.idUser && a.paymentId == filterProofDTO.kindOfPayment
                         && a.date >= filterProofDTO.beginDate && a.date <= filterProofDTO.endDate
                         && a.isActive == true).ToList();
+                   
                     return list;
                 }
             }

@@ -115,8 +115,6 @@
           <ScalarProperty Name="firstName" ColumnName="firstName" />
           <ScalarProperty Name="lastName" ColumnName="lastName" />
           <ScalarProperty Name="phone" ColumnName="phone" />
-          <ScalarProperty Name="address" ColumnName="address" />
-          <ScalarProperty Name="city" ColumnName="city" />
           <ScalarProperty Name="mail" ColumnName="mail" />
           <ScalarProperty Name="password" ColumnName="password" />
         </MappingFragment>

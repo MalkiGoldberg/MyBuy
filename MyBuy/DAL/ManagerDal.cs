@@ -53,8 +53,23 @@ namespace DAL
             catch(Exception)
             
             {
-                throw;
+                return false; 
                 return false;
+            }
+        }
+        public string SignUp(Manager manager)
+        {
+            try
+            {
+                using (MyBuyEntities db = new MyBuyEntities())
+                {
+                    Manager m = db.Managers.Single(br => br.userName == manager.userName && br.password == manager.password);
+                    return m.managerId;
+                }
+            }
+            catch
+            {
+                return "error";
             }
         }
     }

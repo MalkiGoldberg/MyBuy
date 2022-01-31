@@ -9,6 +9,8 @@ namespace API.Controllers
     [System.Web.Http.Cors.EnableCors(origins: "*", headers: "*", methods: "*")]
     public class BranchController : ApiController
     {
+        [HttpGet]
+        [Route("api/Branch/GetBranch")]
         public DTO.BranchDTO Get(int id)
         {
             BL.BranchBL branchBL = new BL.BranchBL();
@@ -28,8 +30,8 @@ namespace API.Controllers
             branchDTO.userName = userName;
             branchDTO.password = password;
             branchDTO= new BL.BranchBL().SignUp(branchDTO);
-            branchDTO.userName = userName;
-            branchDTO.password = password;
+            //branchDTO.userName = userName;
+            //branchDTO.password = password;
             return branchDTO;
         }
         [HttpPost]

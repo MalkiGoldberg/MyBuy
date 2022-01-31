@@ -1,33 +1,22 @@
-<form (submit)="signUpBranch(username.value,password.value,nameStore.value,
+ <form (submit)="signUpBranch(username.value,password.value,nameStore.value,
 phone.value,address.value,city.value)">
-    <input type="text" value="שם משתמש" #username /><br/>
+ <input type="text" value="שם משתמש" #username /><br/>
     <input type="text" value="סיסמא" #password/><br/>
-    <input type="text" value="אימות סיסמא" #vertificationPassword/><br/>
+    <input type="text" value="אימות סיסמא" #vertificationPassword (onchange)="equal(password.value,vertificationPassword.value)"/><br/>
     <input type="text" value="שם סניף" #nameStore/><br/>
     <input type="tel" value="טלפון" #phone/><br/>
     <input type="text" value="כתובת " #address/><br/>
     <input type="text" value=" עיר" #city/><br/>
     <!-- Category -->
-   <h3>קטגוריה</h3> 
-    <!--<div *ngFor="let category of arrCategories" ngModel="categories">
-        <input [value]=catregory.categoryId name="categorySelect" type="radio" />{{category.categoryName}}
-    </div>-->
-    <!-- ChainStore -->
-    <h3>שם רשת</h3>
-
-
-
-
-<!--ngFor לא עובד-->
-
-
- 
-    <select name="ChainStoreSelect">
-        <option *ngFor="let store of arrChainStore" >{{store.chainStoreName}}
-    </select><br>
-
-
+    <h3>קטגוריה</h3>
+    <!-- <div *ngFor="let category of arrCategories" ngModel="categories">
+        {{category.categoryName}} <input [value]=catregory.categoryId name="categorySelect" type="radio" />
+    </div> -->
+    <!--ChainStore -->
+   <h3>שם רשת</h3>
+    <select name="ChainStoreSelect"[(ngModel)]="chainStore">
+        <option [value]="store.chineStoreId" *ngFor="let store of arrChainStore" >{{store.nameChineStore}}
+       </select><br> 
     <button  type="submit" >שמירת נתונים</button>
-    <input type="button"(click)="click()">
-    </form>
+    </form> .
   
