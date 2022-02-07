@@ -12,14 +12,21 @@ import { FormsModule } from '@angular/forms';
 import { NewBranchComponent } from './new-branch/new-branch.component';
 import { FilterProofComponent } from './filter-proof/filter-proof.component';
 import { DefinitionsComponent } from './definitions/definitions.component';
-
+//import {MatFormFieldModule,MatInputModule,MatCardModule, MatButtonModule } from '@angular/material';
 import { NewStoreComponent } from './new-store/new-store.component';
 import { SingleProofComponent } from './single-proof/single-proof.component';
 import { PasswordManagerComponent } from './password-manager/password-manager.component';
 import { SettingComponent } from './setting/setting.component';
-
+import { EgComponent } from './eg/eg.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { FlexLayoutModule } from '@angular/flex-layout';
 @NgModule({
   declarations: [
+  
+      // MatFormFieldModule,
+      // MatInputModule,
+      // MatCardModule,
+      // MatButtonModule,
     AppComponent,
  
     StoreLoginComponent,
@@ -38,9 +45,12 @@ import { SettingComponent } from './setting/setting.component';
     NewStoreComponent,
     SingleProofComponent,
     PasswordManagerComponent,
-    SettingComponent
+    SettingComponent,
+    EgComponent
   ],
-  imports: [
+  imports: [     
+    FlexLayoutModule,
+    BrowserAnimationsModule,
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,

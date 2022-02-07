@@ -50,6 +50,7 @@ export class StoreLoginComponent implements OnInit {
   }
   else this.userAnswer="הלקוח אינו קים במערכת";
   });
+  
  
 }
   
@@ -65,7 +66,4 @@ export class StoreLoginComponent implements OnInit {
   localStorage.setItem("user","customer"); 
   }
   }
- 
-    
-  
 }

@@ -10,8 +10,10 @@ import { StoreSignUpComponent } from './store-sign-up/store-sign-up.component';
 
 import { NewStoreComponent } from './new-store/new-store.component';
 import { SettingComponent } from './setting/setting.component';
+import { EgComponent } from './eg/eg.component';
 
 const routes: Routes = [
+  {path:"eg",component:EgComponent},
   {path:"setting",component:SettingComponent},
   {path:"new-store",component:NewStoreComponent},
   {path:"login/:userType",component:StoreLoginComponent},
@@ -20,7 +22,7 @@ const routes: Routes = [
   {path:"home",component:HomeComponent},
 {path:"definitions",component:DefinitionsComponent},
 {path:"filterProof",component:FilterProofComponent},
-  {path:"**",redirectTo:"/home",pathMatch:"full"}
+  {path:"**",redirectTo:"/eg",pathMatch:"full"}
 ];
 
 @NgModule({

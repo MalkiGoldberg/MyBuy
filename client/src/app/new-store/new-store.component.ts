@@ -24,17 +24,18 @@ public branch:Branch={
   userName:"",
   Categories:[]
 };
-chainStore:number=1;
+
+ chainStore:number=1;
 categories:number[]=[];
   constructor(private store:StoreService, private router:Router,private route: ActivatedRoute
     ) { }
 
   ngOnInit(): void {
-    debugger; 
+
     this.route.queryParams.subscribe(params => {if (params.branch != undefined) 
-      {
+      {     debugger; 
         //params  ובתוכה לשלוח את  getBranchId  לקרוא לפונקציה מהסרוויס 
-      //  this.branch= this.store.GetBranch(params['branch.branchId']);
+        this.store.GetBranch(params['branch']).subscribe(response=>this.branch=response);
 
       }
     this.store.GetCategories().subscribe(categories => this.arrCategories=categories) ;
@@ -55,7 +56,7 @@ categories:number[]=[];
     this.branch.idChainStore=this.chainStore;
     this.branch.Categories=this.categories;
     //איך מקבלים אוביקט ב local storege
-   // this.branch.idManager=localStorage.getItem("currentManager");
+    //this.branch.idManager=localStorage.getItem("currentManager");
     
     return this.store.signUpBranch(this.branch)
     .subscribe((response:any)=>this.saveBranch(response)

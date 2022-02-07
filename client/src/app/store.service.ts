@@ -81,8 +81,13 @@ return this.http.get<Payment[]>("https://localhost:44391/api/Payment/GetPayments
       GetChainStore():Observable<ChainStore[]>{
         return this.http.get<ChainStore[]>("https://localhost:44391/api/GetChainStores");
       }
-      GetBranch(id:number):Observable<Branch> {
-        return this.http.get<Branch>("https://localhost:44391/api/GetBranch");
+      GetBranch(id:any):Observable<Branch> {
+        const params=new HttpParams({
+          fromObject:{
+           id:id
+          }
+        })
+        return this.http.get<Branch>("https://localhost:44391/api/Branch/GetBranch",{params:params});
         
       }
       
