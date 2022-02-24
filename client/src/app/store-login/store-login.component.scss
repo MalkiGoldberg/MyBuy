@@ -1,0 +1,47 @@
+.text{
+    color: dimgrey;
+    direction: ltr;
+    margin-left: 100px;
+    margin-top: 10px;
+}
+.label{
+    color: dimgrey;
+    margin-left: 50px;
+    
+}
+.textPasword{
+    color: dimgrey;
+    direction: ltr;
+    margin-left: 140px;
+}
+#login{
+    width: 450px;
+    height:500px ;
+    margin-left: 560px;
+    opacity: 0.7;
+    background-color: gainsboro;
+    margin-top: 60px;
+    border-radius:15px;
+}
+#loginForm{
+margin-top: 50px;
+}
+// @media only screen and (max-width: 600px) {
+//     #login{
+//       background-color: lightblue;
+//     }}
+  
+.form-group{
+padding-bottom: 20px;
+
+}
+// .bgimg{
+   
+//    background-image: url(assets\images\view.png);
+// }
+// img{
+//     width: 90%;
+//     margin-left:5%;
+// margin-top: 2%;
+// opacity: 0.8;
+// }

@@ -10,3 +10,9 @@ D:\MyBuy\MyBuy\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
 D:\MyBuy\MyBuy\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 D:\MyBuy\MyBuy\DTO\obj\Debug\DTO.dll
 D:\MyBuy\MyBuy\DTO\obj\Debug\DTO.pdb
+D:\MyBuyNew\MyBuy\MyBuy\DTO\bin\Debug\DTO.dll
+D:\MyBuyNew\MyBuy\MyBuy\DTO\bin\Debug\DTO.pdb
+D:\MyBuyNew\MyBuy\MyBuy\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+D:\MyBuyNew\MyBuy\MyBuy\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\MyBuyNew\MyBuy\MyBuy\DTO\obj\Debug\DTO.dll
+D:\MyBuyNew\MyBuy\MyBuy\DTO\obj\Debug\DTO.pdb

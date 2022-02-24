@@ -11,3 +11,17 @@ D:\MyBuy\MyBuyWinform\MyBuyWinform\obj\Debug\MyBuyWinform.csproj.CoreCompileInpu
 D:\MyBuy\MyBuyWinform\MyBuyWinform\obj\Debug\MyBuyWinform.csproj.CopyComplete
 D:\MyBuy\MyBuyWinform\MyBuyWinform\obj\Debug\MyBuyWinform.exe
 D:\MyBuy\MyBuyWinform\MyBuyWinform\obj\Debug\MyBuyWinform.pdb
+D:\MyBuyNew\MyBuy\MyBuyWinform\MyBuyWinform\bin\Debug\MyBuyWinform.exe.config
+D:\MyBuyNew\MyBuy\MyBuyWinform\MyBuyWinform\bin\Debug\MyBuyWinform.exe
+D:\MyBuyNew\MyBuy\MyBuyWinform\MyBuyWinform\bin\Debug\Newtonsoft.Json.dll
+D:\MyBuyNew\MyBuy\MyBuyWinform\MyBuyWinform\bin\Debug\RestSharp.dll
+D:\MyBuyNew\MyBuy\MyBuyWinform\MyBuyWinform\bin\Debug\Newtonsoft.Json.xml
+D:\MyBuyNew\MyBuy\MyBuyWinform\MyBuyWinform\bin\Debug\RestSharp.xml
+D:\MyBuyNew\MyBuy\MyBuyWinform\MyBuyWinform\obj\Debug\MyBuyWinform.csprojAssemblyReference.cache
+D:\MyBuyNew\MyBuy\MyBuyWinform\MyBuyWinform\obj\Debug\MyBuyWinform.Form1.resources
+D:\MyBuyNew\MyBuy\MyBuyWinform\MyBuyWinform\obj\Debug\MyBuyWinform.Properties.Resources.resources
+D:\MyBuyNew\MyBuy\MyBuyWinform\MyBuyWinform\obj\Debug\MyBuyWinform.csproj.GenerateResource.cache
+D:\MyBuyNew\MyBuy\MyBuyWinform\MyBuyWinform\obj\Debug\MyBuyWinform.csproj.CoreCompileInputs.cache
+D:\MyBuyNew\MyBuy\MyBuyWinform\MyBuyWinform\obj\Debug\MyBuyWinform.csproj.CopyComplete
+D:\MyBuyNew\MyBuy\MyBuyWinform\MyBuyWinform\obj\Debug\MyBuyWinform.exe
+D:\MyBuyNew\MyBuy\MyBuyWinform\MyBuyWinform\obj\Debug\MyBuyWinform.pdb

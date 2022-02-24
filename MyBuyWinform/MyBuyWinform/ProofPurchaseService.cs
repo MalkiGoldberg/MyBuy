@@ -22,24 +22,24 @@ namespace MyBuyWinform
 
         }
 
-        public void GenerateProofPurchase()
+        public void GenerateProofPurchase(int idAction, DateTime date,int category,string idUsers,
+            string img,int numPayment,int paymentId,double sum)
         {
             ImageSevice imageSevice = new ImageSevice();
-            string b = imageSevice.ImgToBase64("c:\\IMG_1271 copy.jpg");
-          
+            img= imageSevice.ImgToBase64(img);
+
             PostProofPurchase(new ProofPurchase()
             {
-                idAction = 1,
-                date = new DateTime(),
-                idCategory = 1,
-                idUsers = "212124044",
-                img = b,
+                idAction = idAction,
+                date = date,
+                idCategory = category,
+                idUsers = idUsers,
+                img = img,
                 isActive = true,
-                numPayment = 3,
-                paymentId = 1,
-                proofPurchaseId = 1,
-                sum = 30
-            });
+                numPayment = numPayment,
+                paymentId = paymentId,
+                sum = sum
+            }) ;
         }
     }
 }

@@ -1,10 +1,40 @@
-
-<form (submit)="login(userName.value,password.value)">
-    <input type="text" #userName value="שם משתמש">
-    <input type="password"#password value="סיסמא">
-    <input type="submit" value="אישור">
-    <button (click)="newUser()">האם אתה לקוח חדש במערכת</button>
-    </form>
-    <input  name="userAnswer"[(ngModel)]="userAnswer"[value]="userAnswer"/>
+<!-- 
+    <form (submit)="signUp(username.value,password.value)">
+        שם משתמש<input type=text  #username /><br/>
+        סיסמא   <input type="password"  #password/><br>
+        <button  type="submit" >Login</button>
+        </form> -->
+        <div class="bgimg">
+            <form (submit)="signUp(username.value,password.value)" >
+            <div id="login">
+                
+                <div class="container">
+                    <div id="login-row" class="row justify-content-center align-items-center">
+                        <div id="login-column" class="col-md-6">
+                            <div id="login-box" class="col-md-12">
+                                <form id="loginForm" class="form" action="" method="post">
+                                    <h3 class="label">התחברות</h3>
+                                    <div class="form-group">
+                                        <label for="username" class="text">:שם משתמש</label><br>
+                                        <input type="text" name="username" id="username" #username class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password" class="textPasword">:סיסמא</label><br>
+                                        <input type="text" name="password" id="password" #password class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="remember-me"  class="text"><span>זכור אותי</span> <span><input id="remember-me" name="remember-me" type="checkbox"></span></label><br>
+                                        <input type="submit" name="submit"  class="btn btn-secondary active" value="אישור">
+                                    </div>
+                                    <div id="register-link" class="text-right">
+                                        <a routerLink="/sign up" class="text">הרשמה</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
     
-    
+            </div>
+       </form>     
+    </div>
