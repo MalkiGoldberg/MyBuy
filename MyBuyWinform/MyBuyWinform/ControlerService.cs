@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualBasic.ApplicationServices;
+﻿using DTO;
+using Microsoft.VisualBasic.ApplicationServices;
 using Newtonsoft.Json;
 using RestSharp;
 using System;
@@ -15,20 +16,12 @@ namespace MyBuyWinform
 
     class ControlerService
     {
-        List<Action> actions = new List<Action>();
+        
 
         private static readonly HttpClient client = new HttpClient();
-        //static async Task<Action> GetProductAsync(string path)
-        //{
-        //    Action product = null;
-        //    HttpResponseMessage response = await client.GetAsync(path);
-        //    if (response.IsSuccessStatusCode)
-        //    {
-        //        product = await response.Content.ReadAsAsync<Action>();
-        //    }
-        //    return product;
-        //}
+       
 
+        private string BASE_URL = "https://localhost:44391/";
         public List<Action> GetActions()
         {
             HttpClient client = new HttpClient();
@@ -49,8 +42,48 @@ namespace MyBuyWinform
             return lstActions;
             
         }
-        private string BASE_URL = "https://localhost:44391/";
 
+        internal List<PaymentDTO> GetPayment()
+        {
+            HttpClient client = new HttpClient();
+            List<PaymentDTO> lstActions = new List<PaymentDTO>();
+            client.BaseAddress = new Uri("https://localhost:44391/");
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            // List all Names.
+            HttpResponseMessage response = client.GetAsync("api/Payment/GetPayments").Result;  // Blocking call!
+            if (response.IsSuccessStatusCode)
+            {
+                var products = response.Content.ReadAsStringAsync().Result;
+                lstActions = JsonConvert.DeserializeObject<List<PaymentDTO>>(products);
+            }
+            else
+            {
+                Console.WriteLine("{0} ({1})", (int)response.StatusCode, response.ReasonPhrase);
+            }
+            return lstActions;
+            
+        }
+
+        public List<CategoryDTO> GetCategory()
+        {
+            HttpClient client = new HttpClient();
+            List<CategoryDTO> categoryDTO = new List<CategoryDTO>();
+            client.BaseAddress = new Uri("https://localhost:44391/");
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            // List all Names.
+            HttpResponseMessage response = client.GetAsync("api/GetCategories").Result;  // Blocking call!
+            if (response.IsSuccessStatusCode)
+            {
+                var products = response.Content.ReadAsStringAsync().Result;
+               categoryDTO = JsonConvert.DeserializeObject<List<CategoryDTO>>(products);
+            }
+            else
+            {
+                Console.WriteLine("{0} ({1})", (int)response.StatusCode, response.ReasonPhrase);
+            }
+            return categoryDTO;
+
+        }
         public Task<HttpResponseMessage> find()
         {
             try

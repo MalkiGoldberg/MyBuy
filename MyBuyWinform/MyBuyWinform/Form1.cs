@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,12 +23,16 @@ namespace MyBuyWinform
         int paymentId;
         double sum;
         List<Action> actions = new List<Action>();
+        List<BranchDTO> branchDTOs = new List<BranchDTO>();
+        List<CategoryDTO> categoryDTOs = new List<CategoryDTO>();
+        List<PaymentDTO> paymentDTOs = new List<PaymentDTO>();
         public Form1()
         {
             InitializeComponent();
             ControlerService controlerService = new ControlerService();
           actions= controlerService.GetActions();
-
+            categoryDTOs = controlerService.GetCategory();
+            paymentDTOs = controlerService.GetPayment();
             ControlerService c = new ControlerService();
           //HttpResponseMessage h= c.find().Result;
           //  List<Action> products = h.Content.ReadAsAsync<List<Action>>().Result;
@@ -36,16 +41,24 @@ namespace MyBuyWinform
         }
 
         private void Form1_Load(object sender, EventArgs e)
-        {
+        {///
             actionid.DataSource = actions;
             actionid.DisplayMember = "typeAction";
             actionid.ValueMember = "ActionId";
-        }
+            ///
+            payment.DataSource =paymentDTOs ;
+            payment.DisplayMember = "paymentDescription";
+            payment.ValueMember = "paymentId";
+            ///
+            category.DataSource = categoryDTOs;
+           category.DisplayMember="categoryName";
+          category.ValueMember="categoryId" ;
+    }
 
         private void button1_Click(object sender, EventArgs e)
         {
             ProofPurchaseService proofPurchaseService = new ProofPurchaseService();
-            proofPurchaseService.GenerateProofPurchase(idAction, date, idCategory, idUsers, img, numPayment, paymentId,sum);
+          proofPurchaseService.GenerateProofPurchase(idAction, date, idCategory, idUsers, img, numPayment, paymentId,sum);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -123,5 +136,11 @@ namespace MyBuyWinform
                 }
                 return OutVal;
             }
-        } }
+        }
+
+        private void category_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            idCategory = category.SelectedIndex;
+        }
+    }
 }

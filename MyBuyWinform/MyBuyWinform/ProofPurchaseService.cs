@@ -28,7 +28,7 @@ namespace MyBuyWinform
             ImageSevice imageSevice = new ImageSevice();
             img= imageSevice.ImgToBase64(img);
 
-            PostProofPurchase(new ProofPurchase()
+           bool b= PostProofPurchase(new ProofPurchase()
             {
                 idAction = idAction,
                 date = date,
