@@ -13,6 +13,7 @@ namespace BL.Converts
             DTO.CategoryDTO  categoryDTO = new DTO.CategoryDTO();
             categoryDTO.categoryId = category.categoryId;
             categoryDTO.categoryName = category.categoryName;
+            categoryDTO.date = (int)category.date;
             return categoryDTO;
         }
         public static List<DTO.CategoryDTO> GetCategoriesDTOFromDAL(List<DAL.Category> categories)

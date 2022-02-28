@@ -33,6 +33,7 @@
     <Property Name="dateOfEvacuation" Type="DateTime" Precision="3" />
     <NavigationProperty Name="CategoryInBranches" Relationship="Self.FK_CategoryInBranch_Category" FromRole="Category" ToRole="CategoryInBranch" />
     <NavigationProperty Name="ProofPurchases" Relationship="Self.FK_ProofPurchase_Category" FromRole="Category" ToRole="ProofPurchase" />
+    <Property Name="date" Type="Int32" />
   </EntityType>
   <EntityType Name="CategoryInBranch">
     <Key>

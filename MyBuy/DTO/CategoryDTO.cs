@@ -10,5 +10,6 @@ namespace DTO
     {
         public int categoryId { get; set; }
         public string categoryName { get; set; }
+        public int date { get; set; }
     }
 }

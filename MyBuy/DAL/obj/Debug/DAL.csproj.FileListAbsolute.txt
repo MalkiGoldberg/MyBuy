@@ -54,3 +54,17 @@ D:\MyBuyNew\MyBuy\MyBuy\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 D:\MyBuyNew\MyBuy\MyBuy\DAL\obj\Debug\DAL.csproj.CopyComplete
 D:\MyBuyNew\MyBuy\MyBuy\DAL\obj\Debug\DAL.dll
 D:\MyBuyNew\MyBuy\MyBuy\DAL\obj\Debug\DAL.pdb
+D:\Mybuy!\MyBuy\MyBuy\DAL\bin\Debug\DAL.dll.config
+D:\Mybuy!\MyBuy\MyBuy\DAL\bin\Debug\DAL.dll
+D:\Mybuy!\MyBuy\MyBuy\DAL\bin\Debug\DAL.pdb
+D:\Mybuy!\MyBuy\MyBuy\DAL\bin\Debug\DTO.dll
+D:\Mybuy!\MyBuy\MyBuy\DAL\bin\Debug\EntityFramework.dll
+D:\Mybuy!\MyBuy\MyBuy\DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Mybuy!\MyBuy\MyBuy\DAL\bin\Debug\DTO.pdb
+D:\Mybuy!\MyBuy\MyBuy\DAL\bin\Debug\EntityFramework.xml
+D:\Mybuy!\MyBuy\MyBuy\DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Mybuy!\MyBuy\MyBuy\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+D:\Mybuy!\MyBuy\MyBuy\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\Mybuy!\MyBuy\MyBuy\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\Mybuy!\MyBuy\MyBuy\DAL\obj\Debug\DAL.dll
+D:\Mybuy!\MyBuy\MyBuy\DAL\obj\Debug\DAL.pdb

@@ -77,6 +77,7 @@ namespace MyBuyWinform
             {
                 pictureBox1.Image = Image.FromFile(fileOpen.FileName);
                 pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+                img = fileOpen.FileName;
             }
             fileOpen.Dispose();
 

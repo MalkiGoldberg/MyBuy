@@ -28,6 +28,7 @@
     <Property Name="categoryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="categoryName" Type="nvarchar" MaxLength="20" />
     <Property Name="dateOfEvacuation" Type="datetime" />
+    <Property Name="date" Type="int" />
   </EntityType>
   <EntityType Name="CategoryInBranch">
     <Key>

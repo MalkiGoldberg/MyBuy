@@ -27,6 +27,7 @@
     <EntitySetMapping Name="Categories">
       <EntityTypeMapping TypeName="MyBuyModel.Category">
         <MappingFragment StoreEntitySet="Category">
+          <ScalarProperty Name="date" ColumnName="date" />
           <ScalarProperty Name="categoryId" ColumnName="categoryId" />
           <ScalarProperty Name="categoryName" ColumnName="categoryName" />
           <ScalarProperty Name="dateOfEvacuation" ColumnName="dateOfEvacuation" />

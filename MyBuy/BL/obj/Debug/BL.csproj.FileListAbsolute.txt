@@ -54,3 +54,17 @@ D:\MyBuyNew\MyBuy\MyBuy\BL\obj\Debug\BL.csproj.CoreCompileInputs.cache
 D:\MyBuyNew\MyBuy\MyBuy\BL\obj\Debug\BL.csproj.CopyComplete
 D:\MyBuyNew\MyBuy\MyBuy\BL\obj\Debug\BL.dll
 D:\MyBuyNew\MyBuy\MyBuy\BL\obj\Debug\BL.pdb
+D:\Mybuy!\MyBuy\MyBuy\BL\bin\Debug\BL.dll
+D:\Mybuy!\MyBuy\MyBuy\BL\bin\Debug\BL.pdb
+D:\Mybuy!\MyBuy\MyBuy\BL\bin\Debug\DAL.dll
+D:\Mybuy!\MyBuy\MyBuy\BL\bin\Debug\DTO.dll
+D:\Mybuy!\MyBuy\MyBuy\BL\bin\Debug\EntityFramework.dll
+D:\Mybuy!\MyBuy\MyBuy\BL\bin\Debug\DAL.pdb
+D:\Mybuy!\MyBuy\MyBuy\BL\bin\Debug\DAL.dll.config
+D:\Mybuy!\MyBuy\MyBuy\BL\bin\Debug\DTO.pdb
+D:\Mybuy!\MyBuy\MyBuy\BL\bin\Debug\EntityFramework.xml
+D:\Mybuy!\MyBuy\MyBuy\BL\obj\Debug\BL.csprojAssemblyReference.cache
+D:\Mybuy!\MyBuy\MyBuy\BL\obj\Debug\BL.csproj.CoreCompileInputs.cache
+D:\Mybuy!\MyBuy\MyBuy\BL\obj\Debug\BL.csproj.CopyComplete
+D:\Mybuy!\MyBuy\MyBuy\BL\obj\Debug\BL.dll
+D:\Mybuy!\MyBuy\MyBuy\BL\obj\Debug\BL.pdb
